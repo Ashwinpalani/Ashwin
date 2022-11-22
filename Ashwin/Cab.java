@@ -18,6 +18,7 @@ public class Cab {
     static Cab c = new Cab();
 	static Services service = new Services();
     static BookingDetails b = new BookingDetails();
+    static DbConnection dbes = new DbConnection();
 	static int cb,bb;
 	
 
@@ -101,6 +102,7 @@ public class Cab {
 		
 		//System.out.println("Scheduled for upto " + r.getBookedFor() + " Totally for " + day + " days");
 		r = new Rider(bookedDate,bookedFor,day,c.shifts);
+		
 		double spare = 101;
 		System.out.println(
 				"Do you want to reschedule or cancel the Schedule \n 1.Reschedule \n 2.CancelBooking \n 3.exit");
@@ -108,6 +110,7 @@ public class Cab {
 		sc.nextLine();
 		if (i == 1) {
 			reschedule(bookedDate, bookedFor);
+			dbes.schedule_Details(r,s);
 		} else if (i == 2) {
 			cancelBooking(bookedDate, bookedFor, day);
 		} else { 

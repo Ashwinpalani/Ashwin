@@ -26,6 +26,7 @@ public class Reschedule {
 		return rescheduleDateTo;
 
 }
+	
 //	public void setRescheduleday(Date rescheduleday) {
 //		this.rescheduleday = rescheduleday;
 //	}

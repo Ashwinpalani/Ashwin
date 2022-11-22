@@ -53,8 +53,17 @@ public class DbConnection {
 		}
 	}
 	
-	public void schedule_Details() {
-		
+	public void schedule_Details(Rider r,Reschedule res) {
+		String query = "INSERT INTO ASHWIN_SCHEDULE_DETAILS(shift,bookedDay,bookedFor,day,rescheduleday, rescheduledateto)"
+		+ "values('"+ r +"',"+ res +"')";
+		System.out.println(query);
+		try {
+			st.executeUpdate(query);
+			System.out.println("Added Successfully");
+		} catch (SQLException e) {
+			System.out.println(" Failed");
+			e.printStackTrace();
+		}
 	}
 
 
