@@ -40,6 +40,10 @@ public class Rider {
 		return day;
 	}
 
+	public String updateQuery() {
+		return "'"+shift+"','"+bookedDay+"','"+bookedFor+"','"+day+"";
+		
+}
 	
 	
 	
